@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<ArrayList<Integer>> a=new ArrayList<>();
+        int c=sc.nextInt();
+        for(int i=0;i<c;i++)
+        {
+            int n=sc.nextInt();
+            ArrayList<Integer> b=new ArrayList<>();
+            for(int j=0;j<n;j++)
+            {
+                b.add(sc.nextInt());
+            }
+            a.add(b);
+        }
+        int d=sc.nextInt();
+        for(int i=0;i<d;i++)
+        {
+            int g=sc.nextInt();
+            int h=sc.nextInt();
+            try{
+                System.out.println(a.get(g-1).get(h-1));
+            }
+            catch(IndexOutOfBoundsException e)
+            {
+                System.out.println("ERROR!");
+            }
+        }
+        sc.close();
+    }
+}
